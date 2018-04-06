@@ -1,0 +1,26 @@
+<div class="background">
+    <div class="container hundi_page_back">
+        <div class="container">
+            <h4>Special Entry</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Visit Date</th>
+                    <th>No Of People</th>
+                    <th>Amount</th>
+                </tr>
+                </thead>
+                <tbody class="text-left">
+                <tr ng-repeat="special_entrie in special_entries">
+                    <td>{{$index +1}}</td>
+                    <td>{{special_entrie.visit_date | date:'MMM dd, yyyy'}}</td>
+                    <td>{{special_entrie.no_of_people}}</td>
+                    <td>{{special_entrie.amount}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

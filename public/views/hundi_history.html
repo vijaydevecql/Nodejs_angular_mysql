@@ -1,0 +1,28 @@
+<div class="background">
+    <div class="container hundi_page_back">
+        <div class="container">
+            <h4> Hundi History</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Occasion</th>
+                    <th>On Behalf Of</th>
+                    <th>Amount</th>
+                    <th>Dated</th>
+                </tr>
+                </thead>
+                <tbody class="text-left">
+                <tr ng-repeat="hundi in hundies">
+                    <td>{{$index +1}}</td>
+                    <td>{{hundi.occasion}}</td>
+                    <td>{{hundi.on_behalf}}</td>
+                    <td>{{hundi.amount}}</td>
+                    <td>{{hundi.created_date | date:'MMM dd, yyyy'}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+.background {
+    background-color: #edb904;
+}
+
+.head-padding {
+    padding: 15px;
+}
+
+.navcolor {
+    background-color: #a3000e;
+    border-color: #ffc600;
+}
+
+.text-red {
+    color: #fff;
+    font-size: 16px;
+}
+
+.margin {
+    margin-bottom: 0px;
+}
+
+.font_up {
+    font-size: 25px;
+    color: #a30004;
+    font-family: helvt light;
+    padding-bottom: 7px;
+    display: block;
+    border-bottom: 1px solid #fade04;
+}
+
+.li_up {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.border {
+    /*border-bottom:1px solid #fade04;*/
+    border-right: 1px solid #fade04;
+}
+
+.footer {
+    color: #fff;
+    padding: 16px 0 14px;
+    font-size: 14px;
+    bottom: 0px;
+    width: 100%;
+    /*position:absolute;*/
+    background-color: #a3000e;
+}
+
+.box {
+    border-radius: 0px;
+    height: 40px;
+}
+
+.hundi_page_back {
+    background-color: #fff;
+    padding: 20px 0px;
+}
+
+.nav a span {
+    padding-right: 5px;
+}
+
+.form-horizontal .form-control.ng-empty, #div-forms .form-control.ng-empty {
+    background-color: #ffffff !important;
+}
+
+.form-horizontal .form-control.ng-valid, #div-forms .form-control.ng-valid {
+    background-color: lightgreen;
+}
+
+.form-horizontal .form-control.ng-dirty.ng-invalid-required, #div-forms .form-control.ng-dirty.ng-invalid-required {
+    background-color: red;
+}
+
+.form-horizontal .form-control.ng-dirty.ng-invalid-pattern, #div-forms .form-control.ng-dirty.ng-invalid-pattern, #div-forms .form-control.ng-dirty.ng-invalid-email {
+    background-color: red;
+}
+
+.form-horizontal .form-control.ng-dirty.ng-invalid-minlength, #div-forms .form-control.ng-dirty.ng-invalid-minlength {
+    background-color: yellow;
+}
+
+.form-horizontal .form-control.ng-dirty.ng-invalid-maxlength, #div-forms .form-control.ng-dirty.ng-invalid-maxlength {
+    background-color: red;
+}
+
+.prof-sec {
+    color: #ffffff;
+}
+
+.sum-section {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.no-padding{
+    padding: 0px;
+}
+
+.nav li.active{
+    background: #eee;
+    color: #2a6496 !important;
+}
+.nav li.active a{
+    color: #2a6496 !important;
+}

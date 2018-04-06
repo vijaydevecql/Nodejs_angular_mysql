@@ -1,0 +1,16 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "3.1.1",
+    "angular": "1.5.8",
+    "angular-route": "1.5.8",
+    "font-awesome": "latest",
+    "jquery": "~1.11.1",
+    "jquery-ui": "latest",
+    "angular-datatables": "latest",
+    "ng-file-upload-shim": "latest",
+    "angular-file-upload": "latest",
+    "ng-pickadate": "latest"
+  }
+}

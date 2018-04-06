@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html ng-app="sevaApp">
+<head>
+    <title>The Warrensburg Hindu Temple (WHT)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="libs/jquery-ui/themes/base/jquery-ui.css">
+</head>
+<body>
+<div class="background">
+    <div class="container">
+        <div class="col-xs-12">
+            <div class="col-xs-3 text-left head-padding"><img src="images/ttdlogo.png"/></div>
+            <div class="col-xs-6 text-center head-padding "><img src="images/wht_logo.jpg"/></div>
+            <div class="col-xs-3 text-right head-padding"><img src="images/temple.jpg"/></div>
+
+        </div>
+    </div>
+</div>
+<div>
+    <nav class=" margin navbar navcolor">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a class="text-red" href="/home"> <span class="glyphicon glyphicon-home"></span>Home</a>
+                </li>
+                <li ng-show="isLogin">
+                    <a class="text-red" href="/seva"> <span class="glyphicon glyphicon-bookmark"></span>Seva</a></li>
+                <li ng-show="isLogin">
+                    <a class="text-red" href="/hundi">
+                        <span class="glyphicon glyphicon-briefcase"></span>Hundi Offerings
+                    </a>
+                </li>
+                <li ng-show="isLogin">
+                    <a class="text-red" href="/special">
+                        <span class="glyphicon glyphicon-arrow-right"></span>Special Entry Darshans
+                    </a>
+                </li>
+                <li ng-show="!(isLogin|| isALogin)">
+                    <a class="text-red" href="/reg"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                </li>
+                <li ng-show="!(isLogin|| isALogin)">
+                    <a class="text-red" href="/home"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+                <li ng-show="isALogin">
+                    <a class="text-red" href="/seva-history"><span class="glyphicon glyphicon-log-in"></span> Seva</a>
+                </li>
+                <li ng-show="isALogin">
+                    <a class="text-red" href="/hundi-history"><span class="glyphicon glyphicon-log-in"></span> Hundi</a>
+                </li>
+                <li ng-show="isALogin">
+                    <a class="text-red" href="/special-history"><span class="glyphicon glyphicon-log-in"></span> Special Entry</a>
+                </li>
+                <li ng-show="isALogin">
+                    <a class="text-red" href="/manage_user"><span class="glyphicon glyphicon-log-in"></span> Manage User</a>
+                </li>
+                <li ng-show="isALogin">
+                    <a class="text-red" href="/manage_panel"><span class="glyphicon glyphicon-log-in"></span> Manage Panel</a>
+                </li>
+                <li ng-show="(isLogin || isALogin)">
+                    <a class="text-red" href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </nav>
+</div>
+<div ng-view=""></div>
+<footer class="footer">
+    <div class="container">
+        <div class="col-xs-12 row_clear">
+            <span>Copyright ©  2017. The Warrensburg Hindu Temple (WHT) - All rights reserved</span>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="libs/angular/angular.min.js"></script>
+<script type="text/javascript" src="libs/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Application Angular JS-->
+<!-- controller -->
+<script src="js/controller/LoginCtrl.js"></script>
+<script src="js/controller/mLogoutCtrl.js"></script>
+<script src="js/controller/ServicesCtrl.js"></script>
+<!-- Model -->
+<script src="js/model/CommonService.js"></script>
+<!-- App and Routes -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/appRoutes.js"></script>
+<script>
+    $(document).ready(function () {
+        var selector = '.nav li';
+        $(selector).on('click', function () {
+            $(selector).removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+</body>
+</html>

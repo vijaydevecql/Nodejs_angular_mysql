@@ -1,0 +1,96 @@
+<div class="background">
+    <div class=" container">
+        <div class="col-xs-12 head-padding li_up">
+            <p class="li_up">
+                Welcome to <strong>The Warrensburg Hindu Temple (WHT), </strong>a volunteer-driven, community-supported,
+                non-profit organization. promotes and practices the ideals of Hindu religion through worship and
+                education. The Temple strives for spiritual richness and human excellence through assimilation of the
+                values emphasized in Hindu scriptures and applying them in our daily lives, while recognizing and
+                respecting other religions and belief systems in their due context.
+            </p>
+
+            <p class="li_up">
+                WHT offers many worship services to the deities of the temple in multiple Hindu traditions conducted by
+                our qualified priests. It highly encourages family and community participation from the state of
+                Missouri and vicinity through various religious, social, cultural, and educational activities.
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-xs-8 border">
+            <div class="font_up">
+                latest Updates
+            </div>
+            <div>
+                <ul>
+                    <li class="li_up">WHTs Mobile App Govinda is now available.Downlod <span>Androids App</span></li>
+                    <li class="li_up">How many people visited : {{bookedTicket}}</li>
+                    <li class="li_up">To general digital passbook for the exiting donors</li>
+                    <li class="li_up">Beware..! Never share Debit/Credit Card/ Account details, ATM PIN, Password, CVV,
+                        OTP over phone/email, WHT never asks for such details
+                    </li>
+                    <li class="li_up">WHT does not authorize any agents for online booking of Darshan / Seva /
+                        Accommodation / Prasadam.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-4" ng-show="!(isLogin || isALogin)">
+            <div class="font_up">
+                Login Details
+            </div>
+            <form class="form-horizontal li_up" name="myForm">
+                <div class="alert alert-danger" ng-show="error_msg">
+                    <strong>{{errors_msg}}</strong>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12 text-center" ng-init="user.types='user'">
+                        <label class="radio-inline">
+                            <input type="radio" name="types" ng-model="user.types" value="user">As User
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="types" ng-model="user.types" value="admin">As Admin
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email"
+                               ng-model="user.email" required ng-minlength="3" ng-maxlength="50">
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12">
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                               ng-model="user.password" required ng-minlength="3" ng-maxlength="50">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class=" col-md-12">
+                        <button type="submit" class="btn btn-default" ng-click="login()" ng-disabled="myForm.$invalid">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-4 prof-sec" ng-show="(isLogin || isALogin)">
+            <div class="font_up">
+                Your Details
+            </div>
+            <div class="col-md-12">
+                <h4>Welcome, {{uname}}</h4>
+            </div>
+            <div class="col-md-12">
+                <h5><a href="/seva-history">View Seva History</a></h5>
+            </div>
+            <div class="col-md-12">
+                <h5><a href="/hundi-history">View Hundi History</a></h5>
+            </div>
+            <div class="col-md-12">
+                <h5><a href="/special-history">View Special Entry History</a></h5>
+            </div>
+        </div>
+    </div>
+</div>

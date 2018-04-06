@@ -1,0 +1,29 @@
+<div class="background">
+    <div class="container hundi_page_back">
+        <div class="container">
+            <h4>Seva</h4>
+            <table class="table table-striped">
+                <thead>
+                <!--seva_name, visit_date, no_of_people, created_date, amount-->
+                <tr>
+                    <th>Sr No</th>
+                    <th>Seva Name</th>
+                    <th>Visit Date</th>
+                    <th>No Of People</th>
+                    <th>Amount</th>
+                </tr>
+                </thead>
+                <tbody class="text-left">
+                <tr ng-repeat="seva in sevas">
+                    <td>{{$index +1}}</td>
+                    <td>{{seva.seva_name}}</td>
+                    <td>{{seva.visit_date | date:'MMM dd, yyyy'}}</td>
+                    <td>{{seva.no_of_people}}</td>
+                    <td>{{seva.amount}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
